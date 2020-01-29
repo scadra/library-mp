@@ -1,0 +1,22 @@
+@import 'scss/variable';
+@import 'Spacing';
+
+#app {
+  .is-primary {
+    background-color: $fouth-color;
+  }
+
+  .container {
+    @extend .container-left;
+    @extend .container-right;
+    min-height: 75vh;
+    background-color: #fff;
+
+    .searchbox {
+      margin-left: 4%;
+      margin-right: 4%;
+    }
+  }
+
+  background-color: $third-color;
+}

@@ -1,0 +1,9 @@
+{
+  "menu": {
+    "home": "Home",
+    "categories": "Categories",
+    "ranking": "Ranking",
+    "sign-up": "Sign up",
+    "log-in": "Log in"
+  }
+}
