@@ -19,11 +19,11 @@
       "@/*": [
         "src/*"
       ],
-      "Models/*": [
-        "./src/models/"
+      "@Models/*": [
+        "src/models/"
       ],
       "Constants/*": [
-        "./src/constants/"
+        "src/constants/"
       ]
     },
     "lib": [

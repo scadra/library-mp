@@ -77,7 +77,7 @@
 
 
 <script>
-import { LANGUAGES } from 'Constants/languages';
+import LANGUAGES from 'Constants/languages';
 
 export default {
   name: 'Navbar',

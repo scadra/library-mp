@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueI18n, { LocaleMessages } from 'vue-i18n';
-import LANGUAGES from 'Constants/languages';
-import { LanguageModel } from 'Models/languages';
+import LANGUAGES from '@/constants/languages';
+import { LanguageModel } from '@/models/language';
 
 Vue.use(VueI18n);
 
