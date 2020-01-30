@@ -1,6 +1,6 @@
-@use postcss-color-function;
-@use postcss-nested;
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+@use 'postcss-color-function';
+@use 'postcss-nested';
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700,900");
 .search {
   &__container {
     padding-top: 0.5%;

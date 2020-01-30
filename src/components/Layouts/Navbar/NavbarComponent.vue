@@ -77,25 +77,26 @@
 
 
 <script>
-import { LANGUAGES } from "Constants/languages";
+import { LANGUAGES } from 'Constants/languages';
+
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   beforeMount() {
     this.setLocale(this.$i18n.locale);
   },
   data() {
     return {
       languages: LANGUAGES,
-      currentLanguage: null
+      currentLanguage: null,
     };
   },
   methods: {
     setLocale(locale) {
       this.$i18n.locale = locale;
       this.currentLanguage = this.languages.find(item => item.code === locale);
-    }
+    },
   },
-  computed: {}
+  computed: {},
 };
 </script>
 

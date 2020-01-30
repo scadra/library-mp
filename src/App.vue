@@ -17,23 +17,21 @@
 </template>
 
 <script>
-import HomeComponent from 'Components/Home/HomeComponent.vue';
 import NavbarComponent from 'Components/Layouts/Navbar/NavbarComponent.vue';
 import SearchBox from 'Components/Shared/Search-box/SearchBoxComponent.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    HomeComponent,
     NavbarComponent,
-    SearchBox
+    SearchBox,
   },
-    data() {
-      return {
-        msg: "Welcome to Your Vue.js App"
-      };
-    }
-  };
+  data() {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

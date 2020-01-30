@@ -19,8 +19,11 @@
       "@/*": [
         "src/*"
       ],
-      "Components/*": [
-        "src/components/"
+      "Models/*": [
+        "./src/models/"
+      ],
+      "Constants/*": [
+        "./src/constants/"
       ]
     },
     "lib": [
