@@ -23,5 +23,4 @@ module.exports = {
       .set('Assets', path.resolve(__dirname, './src/assets/'))
       .set('Constants', path.resolve(__dirname, './src/constants/'))
       .set('Models', path.resolve(__dirname, './src/models/'));
-  },
-};
+  }};
