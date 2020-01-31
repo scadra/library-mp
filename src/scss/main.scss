@@ -2,13 +2,16 @@
 
 html {
   background-color: $third-color;
-  body{
+
+  body {
     background-color: $third-color;
   }
 }
-.is-primary {
+
+.button.is-primary {
   background-color: $main-color;
+
   &:hover {
-  background-color: $main-color-hover;
+    background-color: $main-color-hover;
   }
 }

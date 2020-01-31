@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavbarComponent></NavbarComponent>
+    <Navbar></Navbar>
     <div class="container">
       <div class="columns is-mobile">
         <div class="column is-full-mobile searchbox">
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import NavbarComponent from 'Components/Layouts/Navbar/NavbarComponent.vue';
-import SearchBox from 'Components/Shared/Search-box/SearchBoxComponent.vue';
+import Navbar from 'Components/Layouts/Navbar/navbar.vue';
+import SearchBox from 'Components/Shared/Search-box/search-box.vue';
 
 export default {
   name: 'app',
   components: {
-    NavbarComponent,
+    Navbar,
     SearchBox,
   },
   data() {

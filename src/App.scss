@@ -2,9 +2,6 @@
 @import 'Spacing';
 
 #app {
-  .is-primary {
-    background-color: $fouth-color;
-  }
 
   .container {
     @extend .container-left;
@@ -19,4 +16,8 @@
   }
 
   background-color: $third-color;
+}
+
+.button.is-primary {
+  background-color: $fouth-color !important;
 }

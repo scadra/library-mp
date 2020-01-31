@@ -1,8 +1,7 @@
-const path = require('path');
-
 const jsExtensions = ['.js', '.jsx'];
 const tsExtensions = ['.ts', '.tsx'];
 const allExtensions = jsExtensions.concat(tsExtensions);
+const path = require("path");
 
 module.exports = {
   plugins: ['import'],
@@ -17,7 +16,7 @@ module.exports = {
       },
       alias: {
         map: [
-          ['Constants', './src/constants'],
+          ['Constants', path.join(__dirname, './src/constants/')],
           ['Models', './src/models']
         ]
       }
@@ -38,6 +37,8 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'linebreak-style': 0,
+    "import/prefer-default-export": "off"
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',

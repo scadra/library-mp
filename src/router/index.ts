@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeComponent from 'Components/Home/HomeComponent.vue';
-import NotFoundComponent from 'Components/NotFound/NotFoundComponent.vue';
+import HomeComponent from 'Components/Home/home.vue';
+import NotFoundComponent from 'Components/NotFound/not-found.vue';
 
 Vue.use(VueRouter);
 
