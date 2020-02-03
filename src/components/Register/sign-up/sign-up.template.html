@@ -1,0 +1,58 @@
+<form action="">
+    <div class="modal-card" style="width: auto">
+        <header class="modal-card-head">
+            <p class="modal-card-title">{{ $t('menu.sign-up') }}</p>
+            <button class="delete" aria-label="close" @click="$parent.close()"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <h5 class="title is-5 has-text-centered">Formulaire</h5>
+                    <div class="field">
+                      <label>{{$t('signup.email')}}</label>
+                        <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" :placeholder="$t('signup.email')" v-model="user.email">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                          </span>
+                          <span class="icon is-small is-right">
+                            <i v-if="user.email !== null" :class="{'valide-input fas fa-check-circle': !$v.user.email.$invalid, 'error-input fas fa-times-circle': $v.user.email.$invalid}"></i>
+                          </span>
+                        </p>
+                    </div>
+        
+                      <div class="field">
+                      <label>{{$t('signup.password')}}</label>
+                        <p class="control has-icons-left has-icons-right">
+                          <input class="input" type="password" :placeholder="$t('signup.password')" v-model="user.password">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                          </span>
+                          <span class="icon is-small is-right">
+                            <i v-if="user.password !== null" :class="{'valide-input fas fa-check-circle': !$v.user.password.$invalid, 'error-input fas fa-times-circle': $v.user.password.$invalid}"></i>
+                          </span>
+                        </p>
+                      </div>
+        
+                      <div class="field">
+                        <label>{{$t('signup.verify-password')}}</label>
+                        <p class="control has-icons-left">
+                          <input class="input" type="password" :placeholder="$t('signup.verify-password')">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                          </span>
+                          
+                        </p>
+                      </div>
+                </div>
+                <div class="column">
+                    <h5 class="title is-5 has-text-centered">Social</h5>
+                </div>
+              </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button" type="button" @click="$parent.close()">Close</button>
+            <button class="button is-primary">Login</button>
+        </footer>
+    </div>
+</form>

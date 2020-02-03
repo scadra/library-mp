@@ -23,13 +23,16 @@
         "src/models/*"
       ],
       "Components/*": [
-        "src/components/"
+        "src/components/*"
       ],
       "Constants/*": [
-        "src/constants/"
+        "src/constants/*"
       ],
-      "Models/*": [
-        "src/models/"
+      "Interfaces/*": [
+        "src/services/interfaces/*"
+      ],
+      "Services/*": [
+        "src/services/impl/*"
       ]
     },
     "lib": [
@@ -40,7 +43,7 @@
     ]
   },
   "include": [
-    "src/**/*/*.ts",
+    "src/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
@@ -48,6 +51,6 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ],
 }

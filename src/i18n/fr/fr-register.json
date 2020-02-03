@@ -1,0 +1,11 @@
+{
+    "signup": {
+      "password": "Mot de passe",
+      "verify-password": "Verification du mot de passe",
+      "email": "Email"
+    },
+    "login": {
+        "title": "Seite nicht gefunden ! "
+    }
+}
+  

@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="columns is-mobile">
-        <div class="column is-6 column--align-center">
+        <div class="column is-12 column--align-center">
           <router-view></router-view>
         </div>
       </div>

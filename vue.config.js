@@ -22,5 +22,8 @@ module.exports = {
       .set('Main', path.resolve(__dirname, './src/scss/main.scss'))
       .set('Assets', path.resolve(__dirname, './src/assets/'))
       .set('Constants', path.resolve(__dirname, './src/constants/'))
+      .set('Interfaces', path.resolve(__dirname, './src/services/interfaces/'))
+      .set('Services', path.resolve(__dirname, './src/services/impl/'))
       .set('Models', path.resolve(__dirname, './src/models/'));
-  }};
+  },
+};

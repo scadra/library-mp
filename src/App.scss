@@ -1,5 +1,12 @@
 @import 'scss/variable';
 @import 'Spacing';
+html {
+  background-color: $third-color;
+
+  body {
+    background-color: $third-color;
+  }
+}
 
 #app {
 
@@ -19,5 +26,9 @@
 }
 
 .button.is-primary {
-  background-color: $fouth-color !important;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $main-color-hover;
+  }
 }
