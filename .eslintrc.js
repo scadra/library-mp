@@ -39,7 +39,10 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'linebreak-style': 0,
     "import/prefer-default-export": "off",
-    "no-extra-semi": 0
+    "no-extra-semi": 0,
+    "no-underscore-dangle": 0,
+    "lines-between-class-members": 0,
+    "class-methods-use-this": 0
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',

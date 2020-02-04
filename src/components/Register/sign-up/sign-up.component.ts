@@ -19,6 +19,9 @@ export default class SignUpComponent extends Vue {
     constructor() {
       super();
       this.user = new User();
-      console.log(this.user);
+    }
+
+    get checkPassword(): boolean {
+      return this.user.password === this.user.verifyPassword;
     }
 }

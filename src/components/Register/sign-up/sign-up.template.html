@@ -33,15 +33,16 @@
                           </span>
                         </p>
                       </div>
-        
                       <div class="field">
                         <label>{{$t('signup.verify-password')}}</label>
-                        <p class="control has-icons-left">
-                          <input class="input" type="password" :placeholder="$t('signup.verify-password')">
+                        <p class="control has-icons-left has-icons-right">
+                          <input class="input" type="password" :placeholder="$t('signup.verify-password')" v-model="user.verifyPassword">
                           <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                           </span>
-                          
+                          <span class="icon is-small is-right">
+                            <i v-if="user.verifyPassword !== null" :class="{'valide-input fas fa-check-circle': checkPassword === true, 'error-input fas fa-times-circle': checkPassword === false}"></i>
+                          </span>
                         </p>
                       </div>
                 </div>
