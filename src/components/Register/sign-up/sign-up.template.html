@@ -7,7 +7,19 @@
         <section class="modal-card-body">
             <div class="columns">
                 <div class="column">
-                    <h5 class="title is-5 has-text-centered">Formulaire</h5>
+                    <h5 class="title is-5 has-text-centered">{{$t('signup.form')}}</h5>
+                    <div class="field">
+                      <label>{{$t('signup.pseudo')}}</label>
+                        <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" :placeholder="$t('signup.pseudo')" v-model="user.pseudo">
+                          <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                          </span>
+                          <span class="icon is-small is-right">
+                            <i v-if="user.pseudo !== null" :class="{'valide-input fas fa-check-circle': !$v.user.pseudo.$invalid, 'error-input fas fa-times-circle': $v.user.pseudo.$invalid}"></i>
+                          </span>
+                        </p>
+                    </div>
                     <div class="field">
                       <label>{{$t('signup.email')}}</label>
                         <p class="control has-icons-left has-icons-right">
@@ -47,13 +59,14 @@
                       </div>
                 </div>
                 <div class="column">
-                    <h5 class="title is-5 has-text-centered">Social</h5>
+                    <h5 class="title is-5 has-text-centered">{{$t('signup.social')}}</h5>
+                    <SocialConnect></SocialConnect>
                 </div>
               </div>
         </section>
         <footer class="modal-card-foot">
-            <button class="button" type="button" @click="$parent.close()">Close</button>
-            <button class="button is-primary">Login</button>
+            <button class="button" type="button" @click="$parent.close()">{{$t('button.close')}}</button>
+            <button class="button is-primary">{{$t('signup.register')}}</button>
         </footer>
     </div>
 </form>

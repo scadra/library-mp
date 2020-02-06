@@ -1,8 +1,12 @@
 {
     "signup": {
+      "pseudo": "Pseudo",
       "password": "Mot de passe",
       "verify-password": "Verification du mot de passe",
-      "email": "Email"
+      "email": "Email",
+      "form": "Formulaire",
+      "register": "S'inscrire",
+      "social": "Social"
     },
     "login": {
         "title": "Seite nicht gefunden ! "
