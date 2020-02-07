@@ -12,32 +12,32 @@ import SocialConnect from 'Components/Register/social-connect/social-connect.vue
   components: { SocialConnect },
 })
 export default class SignUpComponent extends Vue {
-    private user: User;
+  private user: User;
 
-    @Validations()
-    Validations = {
-      user: {
-        pseudo: {
-          required,
-          minLength: minLength(5),
-          maxLength: maxLength(20),
-          strongPseudo(pseudo: string) {
-            return (
-              regExPseudo.test(pseudo)
-            );
-          },
+  @Validations()
+  Validations = {
+    user: {
+      pseudo: {
+        required,
+        minLength: minLength(5),
+        maxLength: maxLength(20),
+        strongPseudo(pseudo: string) {
+          return (
+            regExPseudo.test(pseudo)
+          );
         },
-        email: { required, email },
-        password: { required, minLength: minLength(4), maxLength: maxLength(30) },
       },
-    }
+      email: { required, email },
+      password: { required, minLength: minLength(4), maxLength: maxLength(30) },
+    },
+  }
 
-    constructor() {
-      super();
-      this.user = new User();
-    }
+  constructor() {
+    super();
+    this.user = new User();
+  }
 
-    get checkPassword(): boolean {
-      return this.user.password === this.user.verifyPassword;
-    }
+  get checkPassword(): boolean {
+    return this.user.password === this.user.verifyPassword;
+  }
 }

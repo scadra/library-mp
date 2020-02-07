@@ -6,7 +6,7 @@ import IModal from 'Interfaces/IModal';
 import LANGUAGES from 'Constants/languages';
 import LanguageModel from 'Models/language';
 import Login from 'Components/Register/Login/login.vue';
-import SignUp from 'Components/Register/Sign-up/sign-up.vue';
+import SignUp from 'Components/Register/sign-up/sign-up.vue';
 
 @Component({
   components: { Login, SignUp },

@@ -1,5 +1,5 @@
 const jsExtensions = ['.js', '.jsx'];
-const tsExtensions = ['.ts', '.tsx'];
+const tsExtensions = ['.ts', '.tsx', '.vue'];
 const allExtensions = jsExtensions.concat(tsExtensions);
 const path = require("path");
 
@@ -14,12 +14,20 @@ module.exports = {
       'node': {
         'extensions': allExtensions
       },
-      alias: {
-        map: [
-          ['Constants', path.join(__dirname, './src/constants/')],
-          ['Models', './src/models']
-        ]
-      }
+      paths: ['./src'],
+      alias: [
+        ['Components', path.resolve(__dirname, './src/components/')],
+        ['Store', path.resolve(__dirname, './src/store')],
+        ['Router', path.join(__dirname, './src/router')],
+        ['Variable', path.join(__dirname, './src/scss/variable.scss')],
+        ['Spacing', path.join(__dirname, './src/scss/spacing.scss')],
+        ['Main', path.join(__dirname, './src/scss/main.scss')],
+        ['Assets', path.join(__dirname, './src/assets')],
+        ['Constants', path.join(__dirname, './src/constants')],
+        ['Interfaces', path.join(__dirname, './src/services/interfaces/*')],
+        ['Services', path.join(__dirname, './src/services/impl')],
+        ['Models', path.join(__dirname, './src/models')],
+      ]
     }
   }
 
@@ -55,5 +63,5 @@ module.exports = {
     env: {
       jest: true,
     },
-  }, ],
+  },],
 };
