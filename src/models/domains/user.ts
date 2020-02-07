@@ -1,4 +1,6 @@
-export class User {
+import { BaseDomain } from './base';
+
+export class User extends BaseDomain {
   private _email?: String | null = null;
   private _password?: String | null;
   private _verifyPassword?: String | null;
@@ -6,6 +8,7 @@ export class User {
 
 
   constructor(user?: User) {
+    super();
     this._email = user ? user.Email : null;
     this._pseudo = user ? user.Pseudo : null;
     this._password = null;

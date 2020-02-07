@@ -4,7 +4,7 @@ import { Validations, Validate } from 'vuelidate-property-decorators';
 import {
   required, email, minLength, maxLength,
 } from 'vuelidate/lib/validators';
-import { User } from 'Models/user';
+import { User } from 'Models/domains/user';
 import { regExPseudo } from 'Constants/regex';
 import SocialConnect from 'Components/Register/social-connect/social-connect.vue';
 
@@ -29,6 +29,7 @@ export default class SignUpComponent extends Vue {
       },
       email: { required, email },
       password: { required, minLength: minLength(4), maxLength: maxLength(30) },
+      verifyPassword: { required, minLength: minLength(4) },
     },
   }
 

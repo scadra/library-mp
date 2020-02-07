@@ -4,7 +4,7 @@ import { Inject } from 'inversify-props';
 import 'reflect-metadata';
 import IModal from 'Interfaces/IModal';
 import LANGUAGES from 'Constants/languages';
-import LanguageModel from 'Models/language';
+import LanguageModel from 'Models/interfaces/language';
 import Login from 'Components/Register/Login/login.vue';
 import SignUp from 'Components/Register/sign-up/sign-up.vue';
 
