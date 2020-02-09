@@ -10,7 +10,6 @@ import './scss/main.scss';
 import i18n from './i18n/i18n';
 import buildDependencyContainer from './App.container';
 
-
 Vue.config.productionTip = false;
 
 class Main {

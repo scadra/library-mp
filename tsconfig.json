@@ -33,7 +33,10 @@
       ],
       "Services/*": [
         "src/services/impl/*"
-      ]
+      ],
+      "Utils/*" : [
+        "src/utils/*"
+      ],
     },
     "lib": [
       "esnext",

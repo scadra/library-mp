@@ -16,4 +16,7 @@ html {
   &:hover {
     background-color: $main-color-hover;
   }
+  &:disabled {
+    background-color: $main-color-hover;
+  }
 }

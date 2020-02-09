@@ -6,7 +6,8 @@
       "email": "Email",
       "form": "Form",
       "register": "registrieren",
-      "social": "soziale Verbindung"
+      "social": "soziale Verbindung",
+      "pseudo-rule": "Bitte geben Sie nur Buchstaben, Zahlen oder Symbole (- oder .) zwischen 3 und 20 Zeichen ein"
     },
     "login": {
         "title": "Seite nicht gefunden ! "

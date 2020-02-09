@@ -1,0 +1,19 @@
+    <div class="field">
+        <label>{{label}}</label>
+        <p class="control has-icons-left has-icons-right">
+            <input class="input"
+            :type="type"
+            :placeholder="placeholder"
+            v-model="syncModel"/>
+            <span v-if="icon" class="icon is-small is-left">
+                <i :class="icon"></i>
+            </span>
+            <span class="icon is-small is-right">
+                <i v-if="model"
+                  :class="{'valide-input fas fa-check-circle': !isValid,
+                  'error-input fas fa-times-circle': isValid}"></i>
+            </span>
+        </p>
+        {{syncModel}}
+            <small v-if="isValid && model">{{errorMessage}}</small>
+        </div>

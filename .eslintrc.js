@@ -27,6 +27,7 @@ module.exports = {
         ['Interfaces', path.join(__dirname, './src/services/interfaces/*')],
         ['Services', path.join(__dirname, './src/services/impl')],
         ['Models', path.join(__dirname, './src/models')],
+        ['Utils', path.join(__dirname, './src/utils/*')],
       ]
     }
   }

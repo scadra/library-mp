@@ -6,7 +6,8 @@
       "email": "Email",
       "form": "Form",
       "register": "register",
-      "social": "Social"
+      "social": "Social",
+      "pseudo-rule": "Please enter only letters, numbers or symbols (- or .) between 3 and 20 characters"
     },
     "login": {
         "title": "Seite nicht gefunden ! "

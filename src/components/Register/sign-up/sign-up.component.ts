@@ -7,38 +7,50 @@ import {
 import { User } from 'Models/domains/user';
 import { regExPseudo } from 'Constants/regex';
 import SocialConnect from 'Components/Register/social-connect/social-connect.vue';
+import { Regexchecker } from 'Utils/regex';
+import Divider from 'Components/Shared/Divider/divider.vue';
+import Input from 'Components/Shared/Input/input.vue';
 
 @Component({
-  components: { SocialConnect },
+  components: { SocialConnect, Divider },
 })
 export default class SignUpComponent extends Vue {
-  private user: User;
+  private user: User | undefined;
+  private isLoading:boolean = false;
+
+  beforeMount() {
+    this.user = new User();
+  }
 
   @Validations()
   Validations = {
     user: {
       pseudo: {
         required,
-        minLength: minLength(5),
+        minLength: minLength(3),
         maxLength: maxLength(20),
         strongPseudo(pseudo: string) {
           return (
-            regExPseudo.test(pseudo)
+            Regexchecker(regExPseudo.exec(pseudo), pseudo)
           );
         },
       },
       email: { required, email },
       password: { required, minLength: minLength(4), maxLength: maxLength(30) },
-      verifyPassword: { required, minLength: minLength(4) },
+      verifyPassword: { required, minLength: minLength(4), checkPassword: this.checkPassword },
     },
   }
 
-  constructor() {
-    super();
-    this.user = new User();
-  }
 
   get checkPassword(): boolean {
-    return this.user.password === this.user.verifyPassword;
+    if (this.user) {
+      console.log(this.user.password);
+      return this.user.password === this.user.verifyPassword;
+    }
+    return false;
+  }
+
+  submit() {
+    this.isLoading = true;
   }
 }
