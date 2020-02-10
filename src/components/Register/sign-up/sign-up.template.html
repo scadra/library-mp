@@ -13,66 +13,42 @@
       <h5 class="title is-5 has-text-centered">{{$t('signup.form')}}</h5>
       <div class="columns">
         <div class="column">
-          {{ user }}
-          <div class="field">
-            <label>{{$t('signup.pseudo')}}</label>
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="text" :placeholder="$t('signup.pseudo')" v-model="user.pseudo">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i v-if="user.pseudo !== undefined"
-                  :class="{'valide-input fas fa-check-circle': !$v.user.pseudo.$invalid, 'error-input fas fa-times-circle': $v.user.pseudo.$invalid}"></i>
-              </span>
-            </p>
-            <small v-if="$v.user.pseudo.$invalid && user.pseudo !== undefined">{{$t('signup.pseudo-rule')}}</small>
-          </div>
-
-          <div class="field">
-            <label>{{$t('signup.email')}}</label>
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="email" :placeholder="$t('signup.email')" v-model="user.email">
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i v-if="user.email !== undefined"
-                  :class="{'valide-input fas fa-check-circle': !$v.user.email.$invalid, 'error-input fas fa-times-circle': $v.user.email.$invalid}"></i>
-              </span>
-            </p>
-            {{ user.email }}
-          </div>
+          <Input
+            :model.sync="user.pseudo"
+            icon="fas fa-user"
+            :label="$t('signup.pseudo')"
+            :placeholder="$t('signup.pseudo')"
+            :isValid="$v.user.pseudo.$invalid"
+            :errorMessage="$t('signup.pseudo-rule')"
+          ></Input>
+          <Input
+            :model.sync="user.email"
+            icon="fas fa-envelope"
+            :label="$t('signup.email')"
+            :placeholder="$t('signup.email')"
+            :isValid="$v.user.email.$invalid"
+            :errorMessage="$t('signup.email-rule')"
+          ></Input>
         </div>
         <div class="column">
-          <div class="field">
-            <label>{{$t('signup.password')}}</label>
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="password" :placeholder="$t('signup.password')" v-model="user.password">
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i v-if="user.password !== undefined"
-                  :class="{'valide-input fas fa-check-circle': !$v.user.password.$invalid, 'error-input fas fa-times-circle': $v.user.password.$invalid}"></i>
-              </span>
-            </p>
-            <small><em class="fas fa-exclamation-circle"></em>{{$t('signup.pseudo-rule')}}</small>
-          </div>
-          <div class="field">
-            <label>{{$t('signup.verify-password')}}</label>
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="password" :placeholder="$t('signup.verify-password')"
-                v-model="user.verifyPassword">
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i v-if="user.verifyPassword !== null && user.verifyPassword !== undefined"
-                  :class="{'valide-input fas fa-check-circle': checkPassword === true, 'error-input fas fa-times-circle': checkPassword === false}"></i>
-              </span>
-            </p>
-          </div>
+          <Input
+            :model.sync="user.password"
+            icon="fas fa-lock"
+            :label="$t('signup.password')"
+            :placeholder="$t('signup.password')"
+            :isValid="$v.user.password.$invalid"
+            :errorMessage="$t('signup.password-rule')"
+            type="password"
+          ></Input>
+          <Input
+            :model.sync="user.verifyPassword"
+            icon="fas fa-lock"
+            :label="$t('signup.verify-password')"
+            :placeholder="$t('signup.verify-password')"
+            :isValid="$v.user.verifyPassword.$invalid"
+            :errorMessage="$t('signup.verify-password-rule')"
+            type="password"
+          ></Input>
         </div>
       </div>
     </section>

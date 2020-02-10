@@ -12,13 +12,17 @@ import Divider from 'Components/Shared/Divider/divider.vue';
 import Input from 'Components/Shared/Input/input.vue';
 
 @Component({
-  components: { SocialConnect, Divider },
+  components: { SocialConnect, Divider, Input },
 })
 export default class SignUpComponent extends Vue {
-  private user: User | undefined;
+  private user!: User;
   private isLoading:boolean = false;
 
   beforeMount() {
+    this.user = new User();
+  }
+  constructor() {
+    super();
     this.user = new User();
   }
 
@@ -37,14 +41,19 @@ export default class SignUpComponent extends Vue {
       },
       email: { required, email },
       password: { required, minLength: minLength(4), maxLength: maxLength(30) },
-      verifyPassword: { required, minLength: minLength(4), checkPassword: this.checkPassword },
+      verifyPassword: {
+        required,
+        minLength: minLength(4),
+        checkPassword() {
+          return (this.checkPassword);
+        },
+      },
     },
   }
 
 
   get checkPassword(): boolean {
     if (this.user) {
-      console.log(this.user.password);
       return this.user.password === this.user.verifyPassword;
     }
     return false;

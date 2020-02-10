@@ -2,18 +2,19 @@
         <label>{{label}}</label>
         <p class="control has-icons-left has-icons-right">
             <input class="input"
+            :class="{'invalid': model && firstFocus && isValid}"
             :type="type"
             :placeholder="placeholder"
-            v-model="syncModel"/>
+            v-model="syncModel"
+            @blur="firstFocus = true"/>
             <span v-if="icon" class="icon is-small is-left">
                 <i :class="icon"></i>
             </span>
             <span class="icon is-small is-right">
-                <i v-if="model"
+                <i v-if="model && firstFocus"
                   :class="{'valide-input fas fa-check-circle': !isValid,
                   'error-input fas fa-times-circle': isValid}"></i>
             </span>
         </p>
-        {{syncModel}}
-            <small v-if="isValid && model">{{errorMessage}}</small>
+            <small v-if="isValid && model && firstFocus">{{errorMessage}}</small>
         </div>

@@ -7,7 +7,10 @@
       "form": "Formulaire",
       "register": "S'inscrire",
       "social": "Social",
-      "pseudo-rule": "Uniquement des lettres, chiffres ou symboles (- ou .) entre 3 et 20 caractères"
+      "pseudo-rule": "Veuillez entrer des lettres, chiffres ou symboles (- ou .) entre 3 et 20 caractères",
+      "email-rule": "Veuillez entrer une adresse email valide",
+      "password-rule": "Veuillez entrer un mot de passe entre 4 et 30 caractères",
+      "verify-password-rule": "Les mots de passent ne correspondent pas"
     },
     "login": {
         "title": "Seite nicht gefunden ! "

@@ -7,7 +7,10 @@
       "form": "Form",
       "register": "registrieren",
       "social": "soziale Verbindung",
-      "pseudo-rule": "Bitte geben Sie nur Buchstaben, Zahlen oder Symbole (- oder .) zwischen 3 und 20 Zeichen ein"
+      "pseudo-rule": "Bitte geben Sie nur Buchstaben, Zahlen oder Symbole (- oder .) zwischen 3 und 20 Zeichen ein",
+      "email-rule": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "password-rule": "Bitte geben Sie ein Passwort zwischen 4 und 30 Zeichen ein",
+      "verify-password-rule": "Passwörter stimmen nicht überein"
     },
     "login": {
         "title": "Seite nicht gefunden ! "
