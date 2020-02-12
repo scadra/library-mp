@@ -51,7 +51,8 @@ module.exports = {
     "no-underscore-dangle": 0,
     "lines-between-class-members": 0,
     "class-methods-use-this": 0,
-    "indent": 0
+    "indent": 0,
+    "global-require": 0
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
