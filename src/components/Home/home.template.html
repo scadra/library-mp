@@ -1,1 +1,6 @@
-<div>test sxssss</div>
+<div style="height: 350px;">
+    <l-map v-if="mapModel.showMap" :zoom="mapModel.zoom" :center="mapModel.center" :options="mapModel.mapOptions"
+        style="height: 15em" @update:center="mapModel.centerUpdate()" @update:zoom="mapModel.zoomUpdate()">
+        <l-tile-layer :url="mapModel.url" :attribution="mapModel.attribution" />
+    </l-map>
+</div>

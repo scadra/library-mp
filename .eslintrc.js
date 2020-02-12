@@ -31,7 +31,6 @@ module.exports = {
       ]
     }
   }
-
 };
 module.exports = {
   root: true,
@@ -51,7 +50,8 @@ module.exports = {
     "no-extra-semi": 0,
     "no-underscore-dangle": 0,
     "lines-between-class-members": 0,
-    "class-methods-use-this": 0
+    "class-methods-use-this": 0,
+    "indent": 0
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',

@@ -1,12 +1,12 @@
 import Component from 'vue-class-component';
 import Vue from 'vue';
-import { Validations, Validate } from 'vuelidate-property-decorators';
+import { Validations } from 'vuelidate-property-decorators';
 import {
   required, email, minLength, maxLength,
 } from 'vuelidate/lib/validators';
 import { User } from 'Models/domains/user';
 import { regExPseudo } from 'Constants/regex';
-import SocialConnect from 'Components/Register/social-connect/social-connect.vue';
+import SocialConnect from 'Components/Register/Social-connect/social-connect.vue';
 import { Regexchecker } from 'Utils/regex';
 import Divider from 'Components/Shared/Divider/divider.vue';
 import Input from 'Components/Shared/Input/input.vue';
@@ -16,7 +16,7 @@ import Input from 'Components/Shared/Input/input.vue';
 })
 export default class SignUpComponent extends Vue {
   private user!: User;
-  private isLoading:boolean = false;
+  private isLoading: boolean = false;
 
   beforeMount() {
     this.user = new User();
