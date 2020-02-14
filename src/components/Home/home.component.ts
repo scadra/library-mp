@@ -4,6 +4,7 @@ import Vue from 'vue';
 import Map from 'Components/Shared/Map/map.vue';
 import { Inject } from 'inversify-props';
 import ILocalisation from 'Interfaces/ILocalisation';
+import { ToastProgrammatic as Toast } from 'buefy';
 
 @Component({
     components: {
@@ -16,9 +17,11 @@ export default class HomeComponent extends Vue {
 
     constructor() {
         super();
-        const startAsync = new Promise<string>((resolve, reject) => {
-            console.log(this.localisationService.getLocation());
-            console.log(result);
+        this.localisationService.getLocation().then((value: any) => {
+            console.log('resolve');
+            console.log(value);
+        }).catch(() => {
+            this.localisationService.errorToast(this);
         });
     }
 }

@@ -1,6 +1,6 @@
-@import 'variable';
-@import './modal.scss';
-@import './input.scss';
+@import "variable";
+@import "./modal.scss";
+@import "./input.scss";
 
 html {
   background-color: $third-color;
@@ -18,5 +18,14 @@ html {
   }
   &:disabled {
     background-color: $main-color-hover;
+  }
+}
+
+.title-food {
+  color: black;
+  @font-face {
+    font-family: "Gandhi";
+    src: url("C:/Users/pierrec/Projects/foodstruck-front/src/assets/fonts/gandhi-webfont.woff2") format("woff");
+    font-weight: bold;
   }
 }

@@ -1,9 +1,8 @@
-import { VueConstructor } from 'vue';
 
 /* eslint-disable semi */
 export default interface ILocationService {
     options: Object;
-    getLocation(): void;
-    displayLocationInfo(position: Object): Object;
-    handleLocationError(error: Object): void;
+    getLocation(): Promise<Geolocation | null>;
+    getCoordinates(): Promise<any>;
+    errorToast(instance: any): void
 };
