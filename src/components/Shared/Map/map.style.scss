@@ -1,8 +1,37 @@
+@import "Variable";
+
 .vue2leaflet-map {
   position: sticky !important;
   height: 20em;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
   width: 90%;
   margin-left: 5%;
-  border: 1px black solid;
+  border: 1px
+  black solid;
+  border-bottom-right-radius: 20px;
 }
+
+.map__action {
+  margin-bottom: 0px !important;
+  margin-left: 5%;
+  background-color:
+  $second-color;
+  margin-right: 5%;
+  border-top: 1px solid
+  black;
+  border-left: 1px solid
+  black;
+  border-right: 1px solid
+  black;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  font-size: 80%;
+  .switch {
+    color: white;
+    font-weight: 600;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-left: 80%;
+  }
+}
+

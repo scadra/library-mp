@@ -7,6 +7,9 @@
       "facebook": "Verbinde dich mit Facebook",
       "google": "Verbinde dich mit Google",
       "twitter": "Verbinde dich mit Twitter"
+    },
+    "localisation": {
+      "activation": "Lokalisierung zulassen"
     }
 }
   

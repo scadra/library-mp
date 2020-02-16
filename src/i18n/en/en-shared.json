@@ -7,6 +7,9 @@
       "facebook": "Connect with Facebook",
       "google": "Connect with Google",
       "twitter": "Connect with Twitter"
+    },
+    "localisation": {
+      "activation": "Allow localisation"
     }
 }
   

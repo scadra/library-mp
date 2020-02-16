@@ -1,7 +1,10 @@
 @import "variable";
 @import "./modal.scss";
 @import "./input.scss";
-
+@font-face {
+  font-family: "sittella";
+  src: url("~Assets/fonts/Neon.ttf")
+}
 html {
   background-color: $third-color;
 
@@ -22,10 +25,9 @@ html {
 }
 
 .title-food {
-  color: black;
-  @font-face {
-    font-family: "Gandhi";
-    src: url("C:/Users/pierrec/Projects/foodstruck-front/src/assets/fonts/gandhi-webfont.woff2") format("woff");
-    font-weight: bold;
-  }
+  font-family: sittella;
+    margin-left: 5%;
+  color:
+  #345863;
+  font-weight: initial;
 }
