@@ -1,59 +1,59 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["esnext", "dom"],
     "types": [
-      "webpack-env",
-      "jest"
+      "vite/client",
+      "vite-plugin-pwa/client",
+      "vite-plugin-pages/client",
+      "@intlify/vite-plugin-vue-i18n/client"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "Models/*": [
-        "src/models/*"
-      ],
-      "Components/*": [
-        "src/components/*"
-      ],
-      "Constants/*": [
-        "src/constants/*"
-      ],
-      "Interfaces/*": [
-        "src/services/interfaces/*"
-      ],
-      "Services/*": [
-        "src/services/impl/*"
-      ],
-      "Utils/*" : [
-        "src/utils/*"
-      ],
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+      "/~/*": ["./src/assets/*"],
+      "/@src/*": ["./src/*"]
+    }
+  },
+  "paths": {
+    "@/*": [
+      "src/*"
+    ],
+    "Models/*": [
+      "src/models/*"
+    ],
+    "Components/*": [
+      "src/components/*"
+    ],
+    "Constants/*": [
+      "src/constants/*"
+    ],
+    "Interfaces/*": [
+      "src/services/interfaces/*"
+    ],
+    "Services/*": [
+      "src/services/impl/*"
+    ],
+    "Utils/*" : [
+      "src/utils/*"
+    ],
   },
   "include": [
-    "src/*.ts",
+    "src/**/*.js",
     "src/**/*.ts",
+    "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-  ],
+    "documentation/**/*.md"
+  ]
 }
