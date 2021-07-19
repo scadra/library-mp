@@ -51,6 +51,7 @@
     "filepond-plugin-image-resize": "2.0.10",
     "filepond-plugin-image-transform": "3.7.6",
     "imask": "6.0.7",
+    "lh-components": "1.0.21",
     "mapbox-gl": "2.3.0",
     "markdown-it-emoji": "2.0.0",
     "notyf": "3.10.0",
@@ -121,9 +122,6 @@
     "vite-plugin-radar": "0.2.0",
     "vue-tsc": "0.2.0",
     "yorkie": "2.0.0"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.ts": [

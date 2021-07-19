@@ -32,7 +32,7 @@ watchEffect(() => {
     <div class="navbar-brand">
       <a href="/" class="navbar-item" @click.prevent="scrollTo('#app', 800)">
         <div class="brand-icon">
-          <AnimatedLogo width="34px" height="34px" />
+          <img alt="lh-logo" src="~Assets/img/luxhub.svg" />
         </div>
       </a>
 
@@ -53,16 +53,24 @@ watchEffect(() => {
     <div class="navbar-menu" :class="[isMobileNavOpen && 'is-active']">
       <div class="navbar-start">
         <div class="navbar-item">
-          <a
-            href="https://themeforest.net/item/mp-vuejs-3-admin-and-webapp-ui-kit/31053035"
-            class="nav-link is-active"
+          <router-Link
+            :to="{
+              name: 'index',
+            }"
+            class="nav-link is-scroll"
+            @click.passive="
+              () => {
+                scrollTo('#mp-demos', 800, { offset: -50 })
+                isMobileNavOpen = false
+              }
+            "
           >
-            Buy Now
-          </a>
+            Home
+          </router-Link>
         </div>
 
         <div class="navbar-item">
-          <RouterLink
+          <router-Link
             :to="{
               name: 'index',
               hash: '#mp-demos',
@@ -76,7 +84,7 @@ watchEffect(() => {
             "
           >
             Demos
-          </RouterLink>
+          </router-Link>
         </div>
 
         <div class="navbar-item">

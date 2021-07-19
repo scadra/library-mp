@@ -31,15 +31,15 @@ useHead({
         <div class="hero-body has-text-centered">
           <div class="container">
               <img alt="logo" class="logo-landing mb-5" src="~Assets/img/luxhub-logo-white.svg"/>
-            <h1 class="title is-1 is-bold is-light is-bold">
+            <h1 class="title is-1 is-bold is-light is-bold mt-6">
                Branding <span>Luxhub</span>.
             </h1>
-            <h3 class="subtitle is-4 is-light">
+            <h3 class="subtitle is-4 is-light mb-5">
               The UI Kit.
               <span class="tag is-primary is-rounded">1.0</span>
             </h3>
                   <!--Stacks Section-->
-    <div id="stacks-section mb-6" class="section">
+    <div id="stacks-section mt-6 mb-6" class="section">
         <div class="container">
           <!--Stacks-->
           <div class="stacks">
@@ -142,7 +142,7 @@ useHead({
           </div>
       </div>
 
-<div class="m-auto">
+<div class="mr-auto ml-auto mt-6">
     <V-Button color="success" icon="feather:check" elevated size="huge" class="m-auto">
       GET STARTED
     </V-Button>
